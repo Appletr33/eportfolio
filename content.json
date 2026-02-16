@@ -21,7 +21,7 @@
     "heroSubtitle": "engineering student • programmer • outdoors fan",
     "heroTagline": "Welcome to my ePortfolio.",
     "aboutMe": [
-        "I'm a born-and-raised Oregonian that has a passion for creating and understanding things. I graduated from SEHS in 2023 and currently attend college at LCC. My main hobby is programming which I learnt by myself and practice everyday. I find it extremely fun to create projects, particularly in computer graphics. I also have interests in biology, health and food, voxels, hiking, mountain biking, white water kayaking, finance, beekeeping, and landrace/natural farming. "
+        "I'm a born-and-raised Oregonian that has a passion for creating and understanding things. I graduated from SEHS in 2023 and currently attend college at LCC. My main hobby is programming which I learnt by myself and practice every day. I find it extremely fun to create projects, particularly in computer graphics. I also have interests in biology, health and food, voxels, hiking, mountain biking, white water kayaking, finance, beekeeping, and landrace/natural farming. "
     ],
     "favorites": [
         {
@@ -43,7 +43,7 @@
     "achievements": [
         {
             "title": "Graduated Highschool",
-            "description": "Was apart of IB IHS program for 3 years. I completed AP classes too."
+            "description": "Was a part of IB IHS program for 3 years. I completed AP classes too."
         },
         {
             "title": "Learning to Program",
@@ -57,7 +57,7 @@
     "strengths": [
         {
             "title": "Algorithmic Thinking",
-            "description": "Although I'm a sensitive and an emotional person, I can turn problems into a set of steps and repeatable instrucitons. I can identify patterns and inefficiencies and think about thinks abstractly."
+            "description": "Although I'm a sensitive and an emotional person, I can turn problems into a set of steps and repeatable instructions. I can identify patterns and inefficiencies and think about things abstractly."
         },
         {
             "title": "Understanding others",
@@ -76,7 +76,7 @@
         {
             "emoji": "🎓",
             "title": "Term Goal",
-            "description": "I would like to refine my routines and become more consistent this term."
+            "description": "I would like to refine my routines and become more consistent this term. I would also like to spread out my work more effectively, so I never feel overwhelemed or get bored."
         },
         {
             "emoji": "🌱",
@@ -86,18 +86,18 @@
         {
             "emoji": "💻",
             "title": "Creating Something Meaningful",
-            "description": "I would like to work in a career where I feel like I'm creating something meanginful for myself and others. Currently, I think that will come from a degree in bio-engineering."
+            "description": "I would like to work in a career where I feel like I'm creating something meaningful for myself and others. Currently, I think that will come from a degree in bio-engineering."
         },
         {
             "emoji": "🤝",
             "title": "Work with Others",
-            "description": "I would like to improve my collaboration skills because creating awesome things is only possible when people come together and communicate."
+            "description": "I would like to improve my collaboration skills because creating truly awesome things is only possible when people come together and communicate."
         }
     ],
     "academics": [
         {
             "subject": "Writing",
-            "icon": "✍️",
+            "icon": "",
             "color": "#a78bfa",
             "classes": [
                 {
