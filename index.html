@@ -24,90 +24,227 @@
       <div class="hero__bg">
         <svg viewBox="0 0 1440 900" preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg">
           <defs>
+            <!-- Warm twilight sky -->
             <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stop-color="#0f1117" />
-              <stop offset="60%" stop-color="#161822" />
-              <stop offset="100%" stop-color="#1a2235" />
+              <stop offset="0%" stop-color="#0d0f14" />
+              <stop offset="35%" stop-color="#121420" />
+              <stop offset="65%" stop-color="#1a1520" />
+              <stop offset="85%" stop-color="#2a1a1e" />
+              <stop offset="100%" stop-color="#3d2216" />
             </linearGradient>
-            <linearGradient id="mountainGrad1" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stop-color="#1e3a2f" />
-              <stop offset="100%" stop-color="#0f1117" />
+            <!-- Distant Cascades range -->
+            <linearGradient id="mtGrad1" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#1a2e28" />
+              <stop offset="100%" stop-color="#12161e" />
             </linearGradient>
-            <linearGradient id="mountainGrad2" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stop-color="#16332b" />
-              <stop offset="100%" stop-color="#0d0f15" />
+            <!-- Mid-range ridges -->
+            <linearGradient id="mtGrad2" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#152a22" />
+              <stop offset="100%" stop-color="#0e1218" />
             </linearGradient>
+            <!-- River shimmer -->
+            <linearGradient id="riverGrad" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stop-color="#1a2e38" />
+              <stop offset="30%" stop-color="#1e3a4a" />
+              <stop offset="60%" stop-color="#244a58" />
+              <stop offset="100%" stop-color="#1a2e38" />
+            </linearGradient>
+            <!-- Horizon glow — warm amber instead of cold blue -->
+            <radialGradient id="horizonGlow" cx="0.75" cy="0.85" r="0.4">
+              <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.12" />
+              <stop offset="50%" stop-color="#d97706" stop-opacity="0.06" />
+              <stop offset="100%" stop-color="#d97706" stop-opacity="0" />
+            </radialGradient>
+            <!-- Moon — smaller, more atmospheric -->
             <radialGradient id="moonGlow" cx="0.5" cy="0.5" r="0.5">
-              <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.15" />
-              <stop offset="100%" stop-color="#38bdf8" stop-opacity="0" />
+              <stop offset="0%" stop-color="#e2e8f0" stop-opacity="0.12" />
+              <stop offset="100%" stop-color="#e2e8f0" stop-opacity="0" />
             </radialGradient>
           </defs>
+
+          <!-- Sky background with warm horizon -->
           <rect width="1440" height="900" fill="url(#skyGrad)" />
-          <g fill="#e2e8f0" opacity="0.4">
-            <circle cx="120" cy="80" r="1" />
-            <circle cx="350" cy="150" r="1.2" />
-            <circle cx="580" cy="60" r="0.8" />
-            <circle cx="720" cy="200" r="1" />
-            <circle cx="900" cy="90" r="1.5" />
-            <circle cx="1050" cy="170" r="0.8" />
-            <circle cx="1200" cy="50" r="1.2" />
-            <circle cx="1350" cy="130" r="1" />
-            <circle cx="200" cy="220" r="0.6" />
-            <circle cx="480" cy="240" r="0.9" />
-            <circle cx="800" cy="280" r="0.7" />
-            <circle cx="1100" cy="260" r="1.1" />
-            <circle cx="300" cy="310" r="0.8" />
-            <circle cx="650" cy="120" r="1.3" />
-            <circle cx="1000" cy="40" r="0.9" />
+          <rect width="1440" height="900" fill="url(#horizonGlow)" />
+
+          <!-- Stars — sparse, realistic -->
+          <g fill="#e2e8f0" opacity="0.35">
+            <circle cx="90" cy="55" r="0.8" />
+            <circle cx="230" cy="120" r="1.1" />
+            <circle cx="410" cy="40" r="0.7" />
+            <circle cx="560" cy="95" r="1" />
+            <circle cx="680" cy="30" r="0.9" />
+            <circle cx="820" cy="110" r="0.6" />
+            <circle cx="950" cy="65" r="1.2" />
+            <circle cx="1100" cy="45" r="0.8" />
+            <circle cx="1250" cy="100" r="1" />
+            <circle cx="1380" cy="55" r="0.7" />
+            <circle cx="150" cy="200" r="0.5" />
+            <circle cx="500" cy="180" r="0.6" />
+            <circle cx="780" cy="220" r="0.7" />
+            <circle cx="1050" cy="190" r="0.9" />
           </g>
-          <circle cx="1100" cy="180" r="120" fill="url(#moonGlow)" />
-          <circle cx="1100" cy="180" r="20" fill="#38bdf8" opacity="0.12" />
+
+          <!-- Crescent moon -->
+          <circle cx="320" cy="130" r="80" fill="url(#moonGlow)" />
+          <circle cx="320" cy="130" r="14" fill="#e2e8f0" opacity="0.08" />
+          <circle cx="312" cy="126" r="12" fill="#0d0f14" opacity="0.9" />
+
+          <!-- Distant Cascades — soft peaked ridgeline -->
           <path
-            d="M0 650 L200 420 L380 520 L500 380 L650 480 L800 350 L950 450 L1100 320 L1250 430 L1440 360 L1440 900 L0 900Z"
-            fill="url(#mountainGrad1)" opacity="0.5" />
-          <path
-            d="M0 700 L100 550 L250 620 L400 480 L550 580 L700 440 L850 560 L1000 420 L1150 530 L1300 460 L1440 500 L1440 900 L0 900Z"
-            fill="url(#mountainGrad2)" opacity="0.7" />
+            d="M0 580 L80 480 L160 520 L240 440 L340 490 L420 400 L520 460 L600 380
+                   L700 430 L780 360 L880 410 L960 350 L1060 400 L1140 340 L1240 390 L1320 360 L1440 400 L1440 900 L0 900Z"
+            fill="url(#mtGrad1)" opacity="0.45" />
+
+          <!-- Mid ridges — Cascade foothills -->
+          <path d="M0 650 L60 560 L140 600 L240 530 L340 580 L440 500 L540 560 L640 480
+                   L740 540 L840 470 L940 530 L1060 460 L1160 520 L1260 480 L1360 510 L1440 490 L1440 900 L0 900Z"
+            fill="url(#mtGrad2)" opacity="0.65" />
+
+          <!-- Douglas Fir tree clusters — tall narrow spires, not generic triangles -->
+          <!-- Far left cluster -->
+          <g fill="#0e1c15" opacity="0.7">
+            <polygon points="55,640 60,545 65,640" />
+            <polygon points="40,645 48,530 56,645" />
+            <polygon points="70,650 76,560 82,650" />
+            <polygon points="85,645 90,575 95,645" />
+          </g>
+          <!-- Left-center cluster -->
+          <g fill="#0d1a14" opacity="0.75">
+            <polygon points="240,610 247,505 254,610" />
+            <polygon points="260,615 266,520 272,615" />
+            <polygon points="220,620 228,530 236,620" />
+            <polygon points="275,625 280,545 285,625" />
+          </g>
+          <!-- Center cluster -->
+          <g fill="#0e1c15" opacity="0.7">
+            <polygon points="550,600 556,490 562,600" />
+            <polygon points="570,605 575,510 580,605" />
+            <polygon points="535,610 542,520 549,610" />
+          </g>
+          <!-- Right-center cluster — with taller trees -->
           <g fill="#0d1a14" opacity="0.8">
-            <polygon points="60,700 70,640 80,700" />
-            <polygon points="75,700 85,630 95,700" />
-            <polygon points="50,700 65,620 80,700" />
-            <polygon points="280,680 295,600 310,680" />
-            <polygon points="300,680 315,610 330,680" />
-            <polygon points="260,690 275,620 290,690" />
-            <polygon points="680,660 695,570 710,660" />
-            <polygon points="700,660 715,580 730,660" />
-            <polygon points="660,670 675,590 690,670" />
-            <polygon points="1100,620 1115,530 1130,620" />
-            <polygon points="1120,620 1135,540 1150,620" />
-            <polygon points="1080,630 1095,550 1110,630" />
-            <polygon points="1350,640 1365,560 1380,640" />
-            <polygon points="1370,640 1385,570 1400,640" />
+            <polygon points="860,590 867,470 874,590" />
+            <polygon points="880,595 885,490 890,595" />
+            <polygon points="845,600 852,500 859,600" />
+            <polygon points="895,605 900,510 905,605" />
+            <polygon points="910,600 915,520 920,600" />
           </g>
-          <g stroke="#22c55e" stroke-width="0.8" fill="none" opacity="0.2">
-            <line x1="400" y1="480" x2="500" y2="480" />
-            <line x1="500" y1="480" x2="500" y2="520" />
-            <line x1="500" y1="520" x2="600" y2="520" />
-            <circle cx="400" cy="480" r="3" fill="#22c55e" />
-            <circle cx="500" cy="480" r="2" fill="#22c55e" />
-            <circle cx="600" cy="520" r="3" fill="#22c55e" />
-            <line x1="800" y1="440" x2="900" y2="440" />
-            <line x1="900" y1="440" x2="900" y2="490" />
-            <line x1="900" y1="490" x2="1000" y2="490" />
-            <circle cx="800" cy="440" r="2" fill="#22c55e" />
-            <circle cx="900" cy="440" r="3" fill="#22c55e" />
-            <circle cx="1000" cy="490" r="2" fill="#22c55e" />
-            <line x1="200" y1="600" x2="280" y2="600" />
-            <line x1="280" y1="600" x2="280" y2="640" />
-            <circle cx="200" cy="600" r="2" fill="#22c55e" />
-            <circle cx="280" cy="640" r="3" fill="#22c55e" />
-            <line x1="1150" y1="530" x2="1250" y2="530" />
-            <line x1="1250" y1="530" x2="1250" y2="570" />
-            <circle cx="1150" cy="530" r="2" fill="#22c55e" />
-            <circle cx="1250" cy="570" r="3" fill="#22c55e" />
+          <!-- Far right cluster -->
+          <g fill="#0e1c15" opacity="0.75">
+            <polygon points="1180,580 1186,470 1192,580" />
+            <polygon points="1200,585 1205,490 1210,585" />
+            <polygon points="1165,590 1172,500 1179,590" />
+            <polygon points="1220,590 1225,510 1230,590" />
           </g>
-          <path d="M0 780 L150 720 L350 750 L500 700 L700 740 L900 690 L1100 730 L1300 700 L1440 720 L1440 900 L0 900Z"
+          <!-- Right edge trees -->
+          <g fill="#0d1a14" opacity="0.8">
+            <polygon points="1350,575 1356,465 1362,575" />
+            <polygon points="1370,580 1375,480 1380,580" />
+            <polygon points="1390,585 1395,495 1400,585" />
+            <polygon points="1335,580 1342,490 1349,580" />
+          </g>
+
+          <!-- River winding through the valley -->
+          <path d="M-20 720 Q200 690 400 710 Q600 730 720 700 Q900 660 1050 690 Q1200 720 1460 695"
+            stroke="url(#riverGrad)" stroke-width="18" fill="none" opacity="0.6" stroke-linecap="round" />
+          <!-- River shimmer highlights -->
+          <g stroke="#4aa8c9" stroke-width="1" opacity="0.15" stroke-linecap="round">
+            <line x1="180" y1="706" x2="220" y2="704" />
+            <line x1="450" y1="714" x2="500" y2="712" />
+            <line x1="750" y1="695" x2="810" y2="690" />
+            <line x1="1080" y1="693" x2="1130" y2="695" />
+          </g>
+
+          <!-- Tiny kayaker on the river -->
+          <g transform="translate(700, 694)" opacity="0.65">
+            <!-- kayak hull -->
+            <ellipse cx="0" cy="0" rx="12" ry="3" fill="#3d2914" />
+            <!-- person torso -->
+            <line x1="0" y1="0" x2="0" y2="-8" stroke="#94a3b8" stroke-width="1.5" stroke-linecap="round" />
+            <!-- head -->
+            <circle cx="0" cy="-10" r="2" fill="#94a3b8" />
+            <!-- paddle -->
+            <line x1="-8" y1="-2" x2="8" y2="-6" stroke="#c9944a" stroke-width="1" stroke-linecap="round" />
+          </g>
+
+          <!-- Beehive box near right tree cluster -->
+          <g transform="translate(920, 598)" opacity="0.55">
+            <rect x="-6" y="-10" width="12" height="10" rx="1" fill="#c9944a" stroke="#a67832" stroke-width="0.5" />
+            <rect x="-7" y="-12" width="14" height="3" rx="1" fill="#b8862d" />
+            <line x1="-4" y1="-7" x2="4" y2="-7" stroke="#a67832" stroke-width="0.4" />
+            <line x1="-4" y1="-4" x2="4" y2="-4" stroke="#a67832" stroke-width="0.4" />
+            <!-- tiny bee -->
+            <ellipse cx="14" cy="-14" rx="2" ry="1.2" fill="#f59e0b" opacity="0.6" />
+            <line x1="16" y1="-15" x2="18" y2="-16" stroke="#f59e0b" stroke-width="0.4" opacity="0.4" />
+          </g>
+
+          <!-- Foreground ridge with grass tufts -->
+          <path
+            d="M0 770 L100 730 L200 745 L350 720 L500 740 L650 715 L800 735 L950 710 L1100 730 L1250 718 L1440 735 L1440 900 L0 900Z"
             fill="#0f1117" />
+          <!-- Grass tufts on ridge -->
+          <g stroke="#1a3328" stroke-width="1" fill="none" opacity="0.5">
+            <path d="M150 738 Q152 730 155 738" />
+            <path d="M155 737 Q158 728 161 737" />
+            <path d="M400 732 Q403 722 406 732" />
+            <path d="M408 733 Q410 725 413 733" />
+            <path d="M700 725 Q703 715 706 725" />
+            <path d="M710 726 Q712 718 715 726" />
+            <path d="M1000 722 Q1003 712 1006 722" />
+            <path d="M1010 723 Q1012 716 1015 723" />
+          </g>
+
+          <!-- Cat silhouette (Finn!) sitting on the foreground ridge -->
+          <g transform="translate(1080, 718)" fill="#0a0d12" opacity="0.85">
+            <!-- body -->
+            <ellipse cx="0" cy="0" rx="8" ry="6" />
+            <!-- head -->
+            <circle cx="7" cy="-6" r="5" />
+            <!-- left ear -->
+            <polygon points="4,-9 5,-15 8,-10" />
+            <!-- right ear -->
+            <polygon points="9,-10 11,-15 12,-9" />
+            <!-- tail curving up -->
+            <path d="M-8 -1 Q-16 -8 -12 -16" stroke="#0a0d12" stroke-width="2.5" fill="none" stroke-linecap="round" />
+          </g>
+
+          <!-- Firefly particles — warm amber dots drifting -->
+          <circle cx="200" cy="650" r="1.5" fill="#f59e0b" opacity="0">
+            <animate attributeName="opacity" values="0;0.4;0.1;0.5;0" dur="4s" repeatCount="indefinite" />
+            <animate attributeName="cy" values="650;630;610" dur="6s" repeatCount="indefinite" />
+          </circle>
+          <circle cx="480" cy="680" r="1" fill="#fbbf24" opacity="0">
+            <animate attributeName="opacity" values="0;0.3;0.5;0.2;0" dur="5s" begin="1.2s" repeatCount="indefinite" />
+            <animate attributeName="cy" values="680;660;640" dur="7s" begin="1.2s" repeatCount="indefinite" />
+          </circle>
+          <circle cx="750" cy="660" r="1.2" fill="#f59e0b" opacity="0">
+            <animate attributeName="opacity" values="0;0.5;0.1;0.3;0" dur="3.5s" begin="0.5s"
+              repeatCount="indefinite" />
+            <animate attributeName="cy" values="660;640;620" dur="5.5s" begin="0.5s" repeatCount="indefinite" />
+          </circle>
+          <circle cx="1000" cy="670" r="1" fill="#fbbf24" opacity="0">
+            <animate attributeName="opacity" values="0;0.2;0.5;0.1;0" dur="4.5s" begin="2s" repeatCount="indefinite" />
+            <animate attributeName="cy" values="670;650;630" dur="6.5s" begin="2s" repeatCount="indefinite" />
+          </circle>
+          <circle cx="350" cy="700" r="1.3" fill="#f59e0b" opacity="0">
+            <animate attributeName="opacity" values="0;0.35;0.15;0.4;0" dur="5.5s" begin="3s"
+              repeatCount="indefinite" />
+            <animate attributeName="cy" values="700;678;655" dur="8s" begin="3s" repeatCount="indefinite" />
+          </circle>
+          <circle cx="1250" cy="690" r="0.9" fill="#fbbf24" opacity="0">
+            <animate attributeName="opacity" values="0;0.3;0.45;0;0.2" dur="4s" begin="1.8s" repeatCount="indefinite" />
+            <animate attributeName="cy" values="690;670;650" dur="6s" begin="1.8s" repeatCount="indefinite" />
+          </circle>
+          <circle cx="600" cy="640" r="1.1" fill="#f59e0b" opacity="0">
+            <animate attributeName="opacity" values="0;0.4;0;0.3;0" dur="3.8s" begin="0.8s" repeatCount="indefinite" />
+            <animate attributeName="cy" values="640;622;605" dur="5s" begin="0.8s" repeatCount="indefinite" />
+          </circle>
+
+          <!-- Subtle code fragments — kept but warmer -->
+          <text x="130" y="470" font-family="'Fira Code', monospace" font-size="9" fill="#22c55e"
+            opacity="0.12">&lt;/&gt;</text>
+          <text x="1280" y="510" font-family="'Fira Code', monospace" font-size="8" fill="#22c55e"
+            opacity="0.1">fn()</text>
         </svg>
       </div>
 
@@ -127,27 +264,42 @@
       </div>
     </section>
 
-    <!-- Divider -->
+    <!-- Treeline divider -->
     <div class="divider" aria-hidden="true">
       <svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M0 60 L120 20 L280 40 L400 10 L550 35 L720 5 L880 30 L1020 8 L1180 25 L1300 12 L1440 30 L1440 60Z"
+        <path
+          d="M0 60 L0 45 L60 40 L80 15 L100 40 L150 38 L170 10 L190 38 L240 42 L280 18 L300 35 L340 40 L380 12 L400 40 L460 38 L490 20 L510 38 L560 42 L600 14 L630 38 L680 40 L720 8 L750 38 L800 42 L840 22 L870 38 L920 40 L960 16 L990 38 L1040 42 L1080 12 L1110 40 L1160 38 L1200 20 L1230 40 L1280 42 L1320 14 L1350 40 L1400 38 L1440 45 L1440 60Z"
           fill="#161822" />
       </svg>
     </div>
 
     <!-- ========== ABOUT ME ========== -->
-    <section class="section section--alt" id="about">
+    <section class="section section--alt" id="about" style="--section-accent: #c9944a">
       <div class="container">
         <div class="section__header fade-in">
-          <div class="section__icon">
+          <div class="section__icon section__icon--about">
+            <!-- Cat (Finn) lounging on a laptop -->
             <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="2" y="4" width="24" height="18" rx="3" stroke="#22c55e" stroke-width="1.5" fill="none" />
-              <circle cx="5.5" cy="7.5" r="1" fill="#ef4444" />
-              <circle cx="8.5" cy="7.5" r="1" fill="#f59e0b" />
-              <circle cx="11.5" cy="7.5" r="1" fill="#22c55e" />
-              <line x1="2" y1="10" x2="26" y2="10" stroke="#22c55e" stroke-width="0.5" opacity="0.3" />
-              <text x="6" y="17" font-family="monospace" font-size="5" fill="#22c55e" opacity="0.8">$ whoami</text>
-              <path d="M22 4 Q24 0 26 2 Q28 4 24 6 Q22 4 22 4Z" fill="#22c55e" opacity="0.6" />
+              <!-- laptop base -->
+              <rect x="3" y="14" width="22" height="12" rx="2" stroke="#c9944a" stroke-width="1.2"
+                fill="rgba(201,148,74,0.08)" />
+              <line x1="3" y1="18" x2="25" y2="18" stroke="#c9944a" stroke-width="0.4" opacity="0.3" />
+              <!-- code lines on screen -->
+              <rect x="6" y="16" width="8" height="1.5" rx="0.5" fill="#22c55e" opacity="0.5" />
+              <rect x="15" y="16" width="5" height="1.5" rx="0.5" fill="#38bdf8" opacity="0.4" />
+              <!-- cat body on laptop -->
+              <ellipse cx="14" cy="13" rx="6" ry="3.5" fill="#c9944a" opacity="0.7" />
+              <!-- cat head -->
+              <circle cx="19" cy="10" r="3" fill="#c9944a" opacity="0.8" />
+              <!-- ears -->
+              <polygon points="17,8 17.5,5 19,7.5" fill="#c9944a" opacity="0.8" />
+              <polygon points="20,7.5 21.5,5 21,8" fill="#c9944a" opacity="0.8" />
+              <!-- tail -->
+              <path d="M8 12 Q5 8 7 5" stroke="#c9944a" stroke-width="1.5" fill="none" stroke-linecap="round"
+                opacity="0.7" />
+              <!-- eyes -->
+              <circle cx="18" cy="9.5" r="0.6" fill="#22c55e" />
+              <circle cx="20.5" cy="9.5" r="0.6" fill="#22c55e" />
             </svg>
           </div>
           <h2 class="section__title"><span class="accent">$</span> about<span class="accent">_</span>me</h2>
@@ -226,27 +378,33 @@
       </div>
     </section>
 
-    <!-- Divider -->
+    <!-- Treeline divider -->
     <div class="divider" aria-hidden="true">
       <svg viewBox="0 0 1440 60" preserveAspectRatio="none">
-        <path d="M0 0 L0 40 L180 25 L360 40 L540 20 L720 35 L900 15 L1080 30 L1260 18 L1440 28 L1440 0Z"
+        <path
+          d="M0 0 L0 40 L50 38 L70 12 L90 38 L140 42 L170 18 L195 38 L240 40 L275 8 L300 40 L360 38 L395 22 L420 40 L480 38 L510 14 L535 40 L590 42 L630 10 L660 40 L720 38 L755 16 L780 40 L840 42 L870 12 L900 38 L960 40 L995 20 L1020 40 L1080 38 L1115 10 L1140 40 L1200 42 L1230 18 L1260 38 L1320 40 L1355 14 L1380 38 L1440 40 L1440 0Z"
           fill="#161822" />
       </svg>
     </div>
 
     <!-- ========== ACHIEVEMENTS ========== -->
-    <section class="section" id="achievements">
+    <section class="section" id="achievements" style="--section-accent: #f59e0b">
       <div class="container">
         <div class="section__header fade-in">
-          <div class="section__icon">
+          <div class="section__icon section__icon--amber">
+            <!-- Mountain summit with flag -->
             <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M9 4 H19 V12 Q14 20 9 12Z" stroke="#f59e0b" stroke-width="1.5" fill="none" />
-              <path d="M9 6 Q5 6 5 10 Q5 13 9 12" stroke="#f59e0b" stroke-width="1" fill="none" />
-              <path d="M19 6 Q23 6 23 10 Q23 13 19 12" stroke="#f59e0b" stroke-width="1" fill="none" />
-              <line x1="14" y1="18" x2="14" y2="22" stroke="#f59e0b" stroke-width="1.5" />
-              <rect x="10" y="22" width="8" height="2" rx="1" fill="#f59e0b" />
-              <line x1="23" y1="10" x2="27" y2="10" stroke="#38bdf8" stroke-width="0.7" stroke-dasharray="2 1" />
-              <circle cx="27" cy="10" r="1" fill="#38bdf8" />
+              <!-- mountain -->
+              <path d="M4 24 L14 6 L24 24Z" stroke="#f59e0b" stroke-width="1.2" fill="rgba(245,158,11,0.08)" />
+              <!-- snow cap -->
+              <path d="M11 12 L14 6 L17 12 L15 11 L13 12Z" fill="#f59e0b" opacity="0.25" />
+              <!-- flag pole -->
+              <line x1="14" y1="6" x2="14" y2="2" stroke="#f59e0b" stroke-width="1" />
+              <!-- flag -->
+              <path d="M14 2 L20 3.5 L14 5Z" fill="#ef4444" opacity="0.7" />
+              <!-- trail on mountain -->
+              <path d="M8 22 Q10 18 12 20 Q14 15 14 12" stroke="#f59e0b" stroke-width="0.6" stroke-dasharray="2 1.5"
+                fill="none" opacity="0.4" />
             </svg>
           </div>
           <h2 class="section__title"><span class="accent">~</span> achievements</h2>
@@ -257,25 +415,47 @@
       </div>
     </section>
 
-    <!-- Divider -->
+    <!-- Treeline divider -->
     <div class="divider" aria-hidden="true">
       <svg viewBox="0 0 1440 60" preserveAspectRatio="none">
-        <path d="M0 60 L200 30 L400 45 L600 20 L800 40 L1000 15 L1200 35 L1440 25 L1440 60Z" fill="#161822" />
+        <path
+          d="M0 60 L40 55 L70 15 L100 55 L160 52 L190 20 L215 52 L260 58 L300 10 L330 55 L400 52 L440 25 L470 52 L520 58 L560 12 L590 55 L650 52 L690 18 L720 55 L780 52 L820 8 L850 55 L920 52 L950 22 L980 55 L1040 58 L1080 15 L1110 52 L1170 55 L1210 20 L1240 55 L1300 52 L1340 10 L1370 55 L1420 58 L1440 50 L1440 60Z"
+          fill="#161822" />
       </svg>
     </div>
 
     <!-- ========== STRENGTHS ========== -->
-    <section class="section section--alt" id="strengths">
+    <section class="section section--alt" id="strengths" style="--section-accent: #2dd4bf">
       <div class="container">
         <div class="section__header fade-in">
-          <div class="section__icon">
+          <div class="section__icon section__icon--teal">
+            <!-- Seedling growing into circuit branches -->
             <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M14 6 L12 2 H16 L14 6Z M14 22 L12 26 H16 L14 22Z M6 14 L2 12 V16 L6 14Z M22 14 L26 12 V16 L22 14Z M8.3 8.3 L5.2 5.9 L7.3 3.8 L9.7 6.9Z M19.7 19.7 L22.8 22.1 L20.7 24.2 L18.3 21.1Z M8.3 19.7 L5.9 22.8 L3.8 20.7 L6.9 18.3Z M19.7 8.3 L22.1 5.2 L24.2 7.3 L21.1 9.7Z"
-                fill="#2dd4bf" />
-              <circle cx="14" cy="14" r="5" stroke="#2dd4bf" stroke-width="1.5" fill="none" />
-              <polygon points="14,10 12,15 16,15" fill="#22c55e" opacity="0.6" />
-              <rect x="13.5" y="15" width="1" height="2" fill="#22c55e" opacity="0.5" />
+              <!-- stem -->
+              <line x1="14" y1="26" x2="14" y2="14" stroke="#2dd4bf" stroke-width="1.5" stroke-linecap="round" />
+              <!-- roots -->
+              <path d="M14 26 Q10 28 8 26" stroke="#2dd4bf" stroke-width="0.8" fill="none" opacity="0.4" />
+              <path d="M14 26 Q18 28 20 26" stroke="#2dd4bf" stroke-width="0.8" fill="none" opacity="0.4" />
+              <!-- left leaf -->
+              <path d="M14 18 Q8 16 10 12 Q12 14 14 14" fill="#22c55e" opacity="0.5" />
+              <!-- right leaf -->
+              <path d="M14 16 Q20 14 18 10 Q16 12 14 12" fill="#22c55e" opacity="0.5" />
+              <!-- circuit branches from top -->
+              <line x1="14" y1="14" x2="8" y2="8" stroke="#2dd4bf" stroke-width="1" stroke-linecap="round" />
+              <line x1="14" y1="14" x2="20" y2="8" stroke="#2dd4bf" stroke-width="1" stroke-linecap="round" />
+              <line x1="8" y1="8" x2="4" y2="4" stroke="#2dd4bf" stroke-width="0.8" stroke-linecap="round"
+                opacity="0.6" />
+              <line x1="8" y1="8" x2="4" y2="10" stroke="#2dd4bf" stroke-width="0.8" stroke-linecap="round"
+                opacity="0.6" />
+              <line x1="20" y1="8" x2="24" y2="4" stroke="#2dd4bf" stroke-width="0.8" stroke-linecap="round"
+                opacity="0.6" />
+              <line x1="20" y1="8" x2="24" y2="10" stroke="#2dd4bf" stroke-width="0.8" stroke-linecap="round"
+                opacity="0.6" />
+              <!-- circuit nodes -->
+              <circle cx="4" cy="4" r="1.2" fill="#2dd4bf" opacity="0.7" />
+              <circle cx="24" cy="4" r="1.2" fill="#2dd4bf" opacity="0.7" />
+              <circle cx="8" cy="8" r="1.5" fill="#2dd4bf" />
+              <circle cx="20" cy="8" r="1.5" fill="#2dd4bf" />
             </svg>
           </div>
           <h2 class="section__title"><span class="accent">&gt;</span> strengths</h2>
@@ -286,25 +466,43 @@
       </div>
     </section>
 
-    <!-- Divider -->
+    <!-- Treeline divider -->
     <div class="divider" aria-hidden="true">
       <svg viewBox="0 0 1440 60" preserveAspectRatio="none">
-        <path d="M0 0 L0 30 L240 50 L480 25 L720 55 L960 20 L1200 45 L1440 30 L1440 0Z" fill="#161822" />
+        <path
+          d="M0 0 L0 35 L55 32 L85 8 L110 35 L165 32 L200 15 L230 35 L290 32 L320 10 L350 35 L420 38 L455 12 L480 35 L540 32 L575 20 L600 35 L660 32 L700 8 L730 35 L790 38 L830 15 L860 35 L920 32 L960 10 L990 35 L1050 38 L1090 18 L1120 35 L1180 32 L1215 8 L1240 35 L1300 38 L1340 14 L1370 35 L1420 38 L1440 32 L1440 0Z"
+          fill="#161822" />
       </svg>
     </div>
 
     <!-- ========== GOALS ========== -->
-    <section class="section" id="goals">
+    <section class="section" id="goals" style="--section-accent: #38bdf8">
       <div class="container">
         <div class="section__header fade-in">
-          <div class="section__icon">
+          <div class="section__icon section__icon--blue">
+            <!-- Forest trail leading to sunrise -->
             <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="14" cy="14" r="11" stroke="#38bdf8" stroke-width="1.2" fill="none" />
-              <circle cx="14" cy="14" r="8" stroke="#38bdf8" stroke-width="0.5" fill="none" opacity="0.3" />
-              <polygon points="14,6 16,12 14,10 12,12" fill="#ef4444" opacity="0.8" />
-              <polygon points="14,22 12,16 14,18 16,16" fill="#e2e8f0" opacity="0.6" />
-              <text x="3" y="18" font-family="monospace" font-size="8" fill="#22c55e" opacity="0.5">&lt;</text>
-              <text x="22" y="18" font-family="monospace" font-size="8" fill="#22c55e" opacity="0.5">/&gt;</text>
+              <!-- sun on horizon -->
+              <circle cx="14" cy="10" r="4" fill="#f59e0b" opacity="0.3" />
+              <circle cx="14" cy="10" r="2.5" fill="#f59e0b" opacity="0.5" />
+              <!-- sun rays -->
+              <g stroke="#f59e0b" stroke-width="0.6" opacity="0.3" stroke-linecap="round">
+                <line x1="14" y1="4" x2="14" y2="2" />
+                <line x1="8" y1="7" x2="7" y2="5" />
+                <line x1="20" y1="7" x2="21" y2="5" />
+              </g>
+              <!-- trees on sides -->
+              <polygon points="3,24 5,14 7,24" fill="#22c55e" opacity="0.4" />
+              <polygon points="6,24 8,16 10,24" fill="#22c55e" opacity="0.35" />
+              <polygon points="18,24 20,16 22,24" fill="#22c55e" opacity="0.35" />
+              <polygon points="21,24 23,14 25,24" fill="#22c55e" opacity="0.4" />
+              <!-- trail path converging to sun -->
+              <path d="M10 26 Q12 20 14 14" stroke="#38bdf8" stroke-width="1" fill="none" stroke-linecap="round"
+                opacity="0.6" />
+              <path d="M18 26 Q16 20 14 14" stroke="#38bdf8" stroke-width="1" fill="none" stroke-linecap="round"
+                opacity="0.6" />
+              <!-- ground -->
+              <line x1="2" y1="24" x2="26" y2="24" stroke="#38bdf8" stroke-width="0.5" opacity="0.3" />
             </svg>
           </div>
           <h2 class="section__title"><span class="accent-blue">#</span> goals</h2>
