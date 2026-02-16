@@ -21,7 +21,18 @@
     "heroSubtitle": "engineering student • programmer • outdoors fan",
     "heroTagline": "Welcome to my ePortfolio.",
     "aboutMe": [
-        "I'm a born-and-raised Oregonian that has a passion for creating and understanding things. I graduated from SEHS in 2023 and currently attend college at LCC. My main hobby is programming which I learnt by myself and practice every day. I find it extremely fun to create projects, particularly in computer graphics. I also have interests in biology, health and food, voxels, hiking, mountain biking, white water kayaking, finance, beekeeping, and landrace/natural farming. "
+        {
+            "title": "My Background",
+            "text": "I'm a born-and-raised Oregonian that has a passion for creating and understanding things. I graduated from SEHS in 2023 and currently attend college at LCC. My main hobby is programming which I learnt by myself and practice every day. I find it extremely fun to create projects, particularly in computer graphics. I also have interests in biology, health and food, voxels, hiking, mountain biking, white water kayaking, finance, beekeeping, and landrace/natural farming."
+        },
+        {
+            "title": "Recently",
+            "text": "For the first time in my life I know what it's like to take care of a pet. During my childhood I was allergic to dogs and cats, so I never got the chance to take care of a pet, that was until last year, when the CDS (cat distribution system) changed that for me. Although the little rascal, Finn, requires a lot of attention, it's been an eye opening experience to be responsible for something living, and totally given me new perspective about owning pets."
+        },
+        {
+            "title": "In the Future",
+            "text": "I hope I get the opportunity to have a large garden, large enough to share the bounty with others and bond over locally grown food. I think it's really important to support local farming practices that are working to restore soil conditions and practice restorative agriculture. I hope to be a part of that in the future."
+        }
     ],
     "favorites": [
         {

@@ -623,17 +623,55 @@ body.enable-scanline .card:hover::before {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 48px;
-  align-items: center;
+  align-items: start;
+  /* Align to top so boxes stack nicely */
 }
 
-.about__text p {
+/* Container for the boxes */
+.about__text {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* Container for the right column (SVG + Extra text) */
+.about__right-column {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.about-box {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-left: 2px solid transparent;
+  border-radius: var(--radius-sm);
+  padding: 24px;
+  margin-bottom: 24px;
+  transition: border-color 0.3s, background 0.3s;
+}
+
+.about-box:last-child {
+  margin-bottom: 0;
+}
+
+.about-box:hover {
+  border-left-color: var(--accent-green);
+  background: var(--bg-card-hover);
+}
+
+.about-box__title {
+  font-family: var(--font-mono);
+  font-size: 1.1rem;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.about-box p {
   color: var(--text-secondary);
-  margin-bottom: 16px;
   font-size: 1rem;
   line-height: 1.8;
-}
-
-.about__text p:last-child {
   margin-bottom: 0;
 }
 
@@ -641,6 +679,8 @@ body.enable-scanline .card:hover::before {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  /* Sticky removed to prevent overlap with text below */
 }
 
 .about__visual svg {

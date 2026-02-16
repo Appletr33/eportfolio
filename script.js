@@ -86,10 +86,36 @@ document.addEventListener('DOMContentLoaded', async () => {
     const heroTagline = document.querySelector('[data-content="heroTagline"]');
     if (heroTagline) heroTagline.textContent = c.heroTagline;
 
-    // About Me
+    // About Me - Left Side (First 2 items)
     const aboutContainer = document.querySelector('[data-content="aboutMe"]');
     if (aboutContainer && c.aboutMe) {
-      aboutContainer.innerHTML = c.aboutMe.map(p => `<p>${p}</p>`).join('');
+      // Take only the first 2 items
+      const leftItems = c.aboutMe.slice(0, 2);
+      aboutContainer.innerHTML = leftItems.map((item, index) => `
+        <div class="about-box fade-in-left" style="transition-delay: ${index * 100}ms">
+          ${item.title ? `<h3 class="about-box__title">${item.title}</h3>` : ''}
+          <p>${item.text || 'Coming soon...'}</p>
+        </div>
+      `).join('');
+    }
+
+    // About Me - Right Side (3rd item, under SVG)
+    const aboutExtraContainer = document.querySelector('[data-content="aboutMeExtra"]');
+    if (aboutExtraContainer && c.aboutMe && c.aboutMe.length > 2) {
+      const extraItem = c.aboutMe[2]; // get the 3rd item
+      aboutExtraContainer.innerHTML = `
+        <div class="about-box fade-in-right" style="transition-delay: 200ms">
+          ${extraItem.title ? `<h3 class="about-box__title">${extraItem.title}</h3>` : ''}
+          <p>${extraItem.text || 'Coming soon...'}</p>
+        </div>
+      `;
+    }
+
+    // Observe all new fade-ins
+    if (TOGGLE_FADE_IN) {
+      document.querySelectorAll('.about-box.fade-in-left, .about-box.fade-in-right').forEach(el => fadeObserver.observe(el));
+    } else {
+      document.querySelectorAll('.about-box.fade-in-left, .about-box.fade-in-right').forEach(el => el.classList.add('visible'));
     }
 
     // Favorites
@@ -433,9 +459,9 @@ document.addEventListener('DOMContentLoaded', async () => {
           const id = entry.target.getAttribute('id');
           navLinksItems.forEach(link => {
             const href = link.getAttribute('href');
-            if (id === 'home' && (href === 'index.html' || href === '#home')) {
+            if (id === 'home' && (href === 'index.html' || href === '#home' || href.endsWith('#home'))) {
               link.classList.add('active');
-            } else if (href === `#${id}`) {
+            } else if (href === `#${id}` || href.endsWith(`#${id}`)) {
               link.classList.add('active');
             }
           });

@@ -155,62 +155,69 @@
         </div>
 
         <div class="about-layout">
-          <!-- Text populated from content.json -->
-          <div class="about__text fade-in-left" data-content="aboutMe">
+          <!-- Text populated from content.json (first 2 items) -->
+          <div class="about__text" data-content="aboutMe">
             <p>Loading...</p>
           </div>
 
-          <div class="about__visual fade-in-right">
-            <!-- SVG: Laptop in nature scene -->
-            <svg viewBox="0 0 380 320" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <ellipse cx="190" cy="290" rx="170" ry="30" fill="#16332b" opacity="0.5" />
-              <g transform="translate(40, 80)">
-                <polygon points="30,180 45,120 60,180" fill="#1e4d3a" opacity="0.6" />
-                <polygon points="30,150 45,90 60,150" fill="#1e5c42" opacity="0.7" />
-                <polygon points="30,120 45,60 60,120" fill="#22704e" opacity="0.8" />
-                <rect x="42" y="180" width="6" height="20" fill="#3d2914" rx="1" />
-              </g>
-              <g transform="translate(280, 100)">
-                <polygon points="30,160 45,100 60,160" fill="#1e4d3a" opacity="0.6" />
-                <polygon points="30,130 45,70 60,130" fill="#1e5c42" opacity="0.7" />
-                <polygon points="30,100 45,40 60,100" fill="#22704e" opacity="0.8" />
-                <rect x="42" y="160" width="6" height="18" fill="#3d2914" rx="1" />
-              </g>
-              <g transform="translate(110, 160)">
-                <rect x="10" y="0" width="140" height="90" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1.5" />
-                <rect x="20" y="12" width="50" height="4" rx="2" fill="#22c55e" opacity="0.6" />
-                <rect x="75" y="12" width="30" height="4" rx="2" fill="#38bdf8" opacity="0.5" />
-                <rect x="20" y="22" width="35" height="4" rx="2" fill="#a78bfa" opacity="0.5" />
-                <rect x="60" y="22" width="55" height="4" rx="2" fill="#e2e8f0" opacity="0.3" />
-                <rect x="20" y="32" width="60" height="4" rx="2" fill="#22c55e" opacity="0.4" />
-                <rect x="85" y="32" width="20" height="4" rx="2" fill="#f59e0b" opacity="0.5" />
-                <rect x="20" y="42" width="45" height="4" rx="2" fill="#38bdf8" opacity="0.4" />
-                <rect x="20" y="52" width="70" height="4" rx="2" fill="#e2e8f0" opacity="0.25" />
-                <rect x="20" y="62" width="40" height="4" rx="2" fill="#22c55e" opacity="0.5" />
-                <rect x="65" y="62" width="35" height="4" rx="2" fill="#a78bfa" opacity="0.4" />
-                <rect x="20" y="72" width="2" height="8" fill="#22c55e" opacity="0.8">
-                  <animate attributeName="opacity" values="0.8;0;0.8" dur="1.2s" repeatCount="indefinite" />
-                </rect>
-                <path d="M0 90 L-10 110 L170 110 L160 90Z" fill="#1e293b" stroke="#334155" stroke-width="1" />
-                <rect x="60" y="95" width="40" height="10" rx="2" fill="#0f172a" stroke="#334155" stroke-width="0.5" />
-              </g>
-              <text x="100" y="155" font-family="'Fira Code', monospace" font-size="12" fill="#22c55e"
-                opacity="0.35">&lt;/&gt;</text>
-              <text x="250" y="175" font-family="'Fira Code', monospace" font-size="10" fill="#38bdf8" opacity="0.3">{
-                }</text>
-              <text x="85" y="190" font-family="'Fira Code', monospace" font-size="9" fill="#a78bfa"
-                opacity="0.25">fn()</text>
-              <path d="M130 50 Q135 44 140 50" stroke="#94a3b8" stroke-width="1" fill="none" opacity="0.4" />
-              <path d="M150 42 Q155 36 160 42" stroke="#94a3b8" stroke-width="1" fill="none" opacity="0.3" />
-              <g stroke="#22c55e" stroke-width="0.6" opacity="0.15">
-                <line x1="85" y1="220" x2="110" y2="220" />
-                <line x1="85" y1="220" x2="85" y2="200" />
-                <circle cx="85" cy="200" r="2" fill="#22c55e" />
-                <line x1="260" y1="230" x2="280" y2="230" />
-                <line x1="280" y1="230" x2="280" y2="210" />
-                <circle cx="280" cy="210" r="2" fill="#22c55e" />
-              </g>
-            </svg>
+          <div class="about__right-column">
+            <div class="about__visual fade-in-right">
+              <!-- SVG: Laptop in nature scene -->
+              <svg viewBox="0 0 380 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <ellipse cx="190" cy="290" rx="170" ry="30" fill="#16332b" opacity="0.5" />
+                <g transform="translate(40, 80)">
+                  <polygon points="30,180 45,120 60,180" fill="#1e4d3a" opacity="0.6" />
+                  <polygon points="30,150 45,90 60,150" fill="#1e5c42" opacity="0.7" />
+                  <polygon points="30,120 45,60 60,120" fill="#22704e" opacity="0.8" />
+                  <rect x="42" y="180" width="6" height="20" fill="#3d2914" rx="1" />
+                </g>
+                <g transform="translate(280, 100)">
+                  <polygon points="30,160 45,100 60,160" fill="#1e4d3a" opacity="0.6" />
+                  <polygon points="30,130 45,70 60,130" fill="#1e5c42" opacity="0.7" />
+                  <polygon points="30,100 45,40 60,100" fill="#22704e" opacity="0.8" />
+                  <rect x="42" y="160" width="6" height="18" fill="#3d2914" rx="1" />
+                </g>
+                <g transform="translate(110, 160)">
+                  <rect x="10" y="0" width="140" height="90" rx="6" fill="#1e293b" stroke="#334155"
+                    stroke-width="1.5" />
+                  <rect x="20" y="12" width="50" height="4" rx="2" fill="#22c55e" opacity="0.6" />
+                  <rect x="75" y="12" width="30" height="4" rx="2" fill="#38bdf8" opacity="0.5" />
+                  <rect x="20" y="22" width="35" height="4" rx="2" fill="#a78bfa" opacity="0.5" />
+                  <rect x="60" y="22" width="55" height="4" rx="2" fill="#e2e8f0" opacity="0.3" />
+                  <rect x="20" y="32" width="60" height="4" rx="2" fill="#22c55e" opacity="0.4" />
+                  <rect x="85" y="32" width="20" height="4" rx="2" fill="#f59e0b" opacity="0.5" />
+                  <rect x="20" y="42" width="45" height="4" rx="2" fill="#38bdf8" opacity="0.4" />
+                  <rect x="20" y="52" width="70" height="4" rx="2" fill="#e2e8f0" opacity="0.25" />
+                  <rect x="20" y="62" width="40" height="4" rx="2" fill="#22c55e" opacity="0.5" />
+                  <rect x="65" y="62" width="35" height="4" rx="2" fill="#a78bfa" opacity="0.4" />
+                  <rect x="20" y="72" width="2" height="8" fill="#22c55e" opacity="0.8">
+                    <animate attributeName="opacity" values="0.8;0;0.8" dur="1.2s" repeatCount="indefinite" />
+                  </rect>
+                  <path d="M0 90 L-10 110 L170 110 L160 90Z" fill="#1e293b" stroke="#334155" stroke-width="1" />
+                  <rect x="60" y="95" width="40" height="10" rx="2" fill="#0f172a" stroke="#334155"
+                    stroke-width="0.5" />
+                </g>
+                <text x="100" y="155" font-family="'Fira Code', monospace" font-size="12" fill="#22c55e"
+                  opacity="0.35">&lt;/&gt;</text>
+                <text x="250" y="175" font-family="'Fira Code', monospace" font-size="10" fill="#38bdf8" opacity="0.3">{
+                  }</text>
+                <text x="85" y="190" font-family="'Fira Code', monospace" font-size="9" fill="#a78bfa"
+                  opacity="0.25">fn()</text>
+                <path d="M130 50 Q135 44 140 50" stroke="#94a3b8" stroke-width="1" fill="none" opacity="0.4" />
+                <path d="M150 42 Q155 36 160 42" stroke="#94a3b8" stroke-width="1" fill="none" opacity="0.3" />
+                <g stroke="#22c55e" stroke-width="0.6" opacity="0.15">
+                  <line x1="85" y1="220" x2="110" y2="220" />
+                  <line x1="85" y1="220" x2="85" y2="200" />
+                  <circle cx="85" cy="200" r="2" fill="#22c55e" />
+                  <line x1="260" y1="230" x2="280" y2="230" />
+                  <line x1="280" y1="230" x2="280" y2="210" />
+                  <circle cx="280" cy="210" r="2" fill="#22c55e" />
+                </g>
+              </svg>
+            </div>
+
+            <!-- Extra About text (3rd item) -->
+            <div class="about__extra" data-content="aboutMeExtra"></div>
           </div>
         </div>
 
