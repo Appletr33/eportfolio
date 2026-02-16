@@ -1,0 +1,156 @@
+{
+    "name": "Alexander Enos",
+    "email": "alexanderenos@proton.me",
+    "socials": [
+        {
+            "platform": "github",
+            "label": "GitHub",
+            "url": "https://github.com/AppleTr33"
+        },
+        {
+            "platform": "linkedin",
+            "label": "LinkedIn",
+            "url": "https://www.linkedin.com/in/alexander-e-b1a7042a5/"
+        },
+        {
+            "platform": "youtube",
+            "label": "YouTube",
+            "url": "https://www.youtube.com/@xan_dr"
+        }
+    ],
+    "heroSubtitle": "engineering student • programmer • outdoors",
+    "heroTagline": "Welcome to my ePortfolio.",
+    "aboutMe": [
+        "I'm a born-and-raised Oregonian that has a passion for creating and understanding things. I graduated from SEHS in 2023 and currently attend college at LCC. I developed a pasion for creating things digitally by teaching myself programming. I also have interests in biology, health and food, hiking, mountain biking, finance, beekeeping, and landrace/natural farming."
+    ],
+    "favorites": [
+        {
+            "emoji": "📖",
+            "label": "Book",
+            "value": "Metro 2033"
+        },
+        {
+            "emoji": "📺",
+            "label": "TV Show",
+            "value": "TWD"
+        },
+        {
+            "emoji": "🎬",
+            "label": "Movie",
+            "value": "Come and See"
+        }
+    ],
+    "achievements": [
+        {
+            "title": "Graduated Highschool",
+            "description": "Was apart of IB IHS program for 3 years. I completed AP classes too."
+        },
+        {
+            "title": "Learning to Program",
+            "description": "You can learn anything! Never let yourself think that you're not smart enough!"
+        },
+        {
+            "title": "Attending College",
+            "description": "I'm extremely grateful for this opportunity!"
+        }
+    ],
+    "strengths": [
+        {
+            "title": "Algorithmic Thinking",
+            "description": "Although I'm a sensitive and an emotional person, I can turn problems into a set of steps and repeatable instrucitons. I can identify pattersn and where things can be more efficient and think about thinks abstractly."
+        },
+        {
+            "title": "Understanding others",
+            "description": "I can generally get a feeling for what others are thinking which helps me communicate easier."
+        },
+        {
+            "title": "Kindness & Empathy",
+            "description": "I try and live by the golden rule, and try not to judge people or treat them differently. I try and be understanding of everyone and the place they're in."
+        },
+        {
+            "title": "Problem Solving",
+            "description": "I'm always thinking, always questioning. I can break complex problems down into simpler ones and come up with solutions. I like to think to myself \"Nothing is impossible\" and there is \"Always a way\""
+        }
+    ],
+    "goals": [
+        {
+            "emoji": "🎓",
+            "title": "Academic Goal",
+            "description": "Describe your academic goal here. What do you want to achieve academically, and why?"
+        },
+        {
+            "emoji": "🌱",
+            "title": "Experience at Lane",
+            "description": "What do you hope to get out of your time at Lane? Why is this important to you?"
+        },
+        {
+            "emoji": "💻",
+            "title": "Career Goal",
+            "description": "What career path are you working toward? Why does this goal matter to you?"
+        }
+    ],
+    "academics": [
+        {
+            "title": "Expanded Technical Definition",
+            "assignmentLink": "#",
+            "reflectionLink": "#",
+            "reflection": [
+                "Write your first reflection paragraph here. Think about what you learned from this assignment, what challenges you faced, and how it helped develop your technical writing skills.",
+                "Write your second reflection paragraph here. Consider how this assignment connects to your academic goals, your strengths, or your career aspirations."
+            ]
+        },
+        {
+            "title": "Annotated Bibliography",
+            "assignmentLink": "#",
+            "reflectionLink": "#",
+            "reflection": [
+                "Write your first reflection paragraph here. What was researching and annotating sources like? What did you learn about evaluating sources and synthesizing information?",
+                "Write your second reflection paragraph here. How did this assignment build on previous work? How might you use annotated bibliographies in the future?"
+            ]
+        },
+        {
+            "title": "Formal Analytical Report",
+            "assignmentLink": "#",
+            "reflectionLink": "#",
+            "reflection": [
+                "Write your first reflection paragraph here. What was the process of writing a formal analytical report like? What did you learn about data analysis and formal writing?",
+                "Write your second reflection paragraph here. How does this report demonstrate your growth as a technical writer? How does it connect to your larger goals?"
+            ]
+        }
+    ],
+    "programming": [
+        {
+            "title": "Indie Developer Simulator",
+            "description": "A 3D browser-based experience where you roleplay as a game programmer. Built from scratch with JavaScript and WebGL.",
+            "link": "#",
+            "tags": [
+                "JavaScript",
+                "WebGL",
+                "3D"
+            ]
+        },
+        {
+            "title": "Another Project",
+            "description": "Describe another programming project here.",
+            "link": "#",
+            "tags": [
+                "Python",
+                "CLI"
+            ]
+        }
+    ],
+    "volunteer": [
+        {
+            "title": "Volunteer Role Title",
+            "organization": "Organization Name",
+            "description": "Describe your volunteer work, what you did, and what you learned from the experience.",
+            "dates": "2024 – Present"
+        },
+        {
+            "title": "Another Volunteer Role",
+            "organization": "Another Organization",
+            "description": "Describe another volunteer experience here.",
+            "dates": "2023 – 2024"
+        }
+    ]
+}
