@@ -1,6 +1,5 @@
 {
     "name": "Alexander Enos",
-    "email": "alexanderenos@proton.me",
     "socials": [
         {
             "platform": "github",
@@ -151,7 +150,7 @@
         },
         {
             "subject": "Math",
-            "icon": "📐",
+            "icon": "",
             "color": "#38bdf8",
             "classes": [
                 {

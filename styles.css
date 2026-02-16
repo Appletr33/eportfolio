@@ -859,10 +859,7 @@ body.enable-scanline .card:hover::before {
   gap: 14px;
 }
 
-.academic-subject__icon {
-  font-size: 1.6rem;
-  line-height: 1;
-}
+
 
 .academic-subject__name {
   font-family: var(--font-mono);
@@ -924,10 +921,7 @@ body.enable-scanline .card:hover::before {
   border-bottom: 1px dashed var(--border-subtle);
 }
 
-.academic-class__icon {
-  font-size: 1.15rem;
-  line-height: 1;
-}
+
 
 .academic-class__name {
   font-family: var(--font-mono);

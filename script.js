@@ -69,12 +69,43 @@ document.addEventListener('DOMContentLoaded', async () => {
         : `${c.name} — ePortfolio`;
     }
     // Email
-    document.querySelectorAll('[data-content="email"]').forEach(el => {
-      el.textContent = c.email;
-      el.href = `mailto:${c.email}`;
-    });
+    // Email (Obfuscated)
+    // Email (Enhanced Obfuscation)
+    const u_b64 = 'YWxleGFuZGVyZW5vcw=='; // alexanderenos
+    const d_b64 = 'cHJvdG9uLm1l';         // proton.me
+
+    const decode = (str) => atob(str);
+
+    // Inject visually correct but structurally confusing HTML
+    const injectEmail = (el) => {
+      const u = decode(u_b64);
+      const d = decode(d_b64);
+
+      el.innerHTML = `${u}<span style="display:none" aria-hidden="true">_remove_me_</span>@${d}`;
+      el.setAttribute('aria-label', `${u}@${d}`); // Accessibility
+
+      // Obfuscate link: only set mailto on hover/click/focus
+      el.href = '#';
+      el.dataset.address = `${u}@${d}`;
+
+      const setMailto = () => {
+        el.href = `mailto:${el.dataset.address}`;
+        el.removeEventListener('mouseover', setMailto);
+        el.removeEventListener('focus', setMailto);
+      };
+
+      el.addEventListener('mouseover', setMailto);
+      el.addEventListener('focus', setMailto);
+      el.addEventListener('click', setMailto);
+    };
+
+    document.querySelectorAll('[data-content="email"]').forEach(injectEmail);
+
     document.querySelectorAll('[data-content="email-text"]').forEach(el => {
-      el.textContent = c.email;
+      const u = decode(u_b64);
+      const d = decode(d_b64);
+      el.innerHTML = `${u}<span style="display:none" aria-hidden="true">_remove_me_</span>@${d}`;
+      el.setAttribute('aria-label', `${u}@${d}`);
     });
 
     // Hero - Typography Updates
@@ -243,7 +274,6 @@ document.addEventListener('DOMContentLoaded', async () => {
           return `
             <div class="academic-class fade-in">
               <div class="academic-class__header">
-                <span class="academic-class__icon" style="color: ${subjectColor}">📚</span>
                 <h4 class="academic-class__name">${cls.name}</h4>
               </div>
               <div class="academic-class__entries">
@@ -256,7 +286,6 @@ document.addEventListener('DOMContentLoaded', async () => {
           <div class="academic-subject fade-in" style="--subject-color: ${subjectColor}">
             <div class="academic-subject__header" onclick="this.parentElement.classList.toggle('collapsed')">
               <div class="academic-subject__title-row">
-                <span class="academic-subject__icon">${subject.icon || '📖'}</span>
                 <h3 class="academic-subject__name">${subject.subject}</h3>
               </div>
               <span class="academic-subject__toggle">
