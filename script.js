@@ -2,8 +2,13 @@
 
 /* Toggle fade-in/slide-in scroll animations (set to false for static) */
 const TOGGLE_FADE_IN = false;
+const ENABLE_SCANLINE_EFFECT = false;
+
 
 document.addEventListener('DOMContentLoaded', async () => {
+  if (ENABLE_SCANLINE_EFFECT) {
+    document.body.classList.add('enable-scanline');
+  }
 
   /* ---- Load shared nav ---- */
   const navSlot = document.getElementById('shared-nav');

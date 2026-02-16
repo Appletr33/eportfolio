@@ -21,7 +21,7 @@
     "heroSubtitle": "engineering student • programmer • outdoors fan",
     "heroTagline": "Welcome to my ePortfolio.",
     "aboutMe": [
-        "I'm a born-and-raised Oregonian that has a passion for creating and understanding things. I graduated from SEHS in 2023 and currently attend college at LCC. My main hobby is programming which I learnt bymself and practice everyday. I find it extremely fun to create projects, particularly in graphics. I also have interests in biology, health and food, voxels, hiking, mountain biking, white water kayaking, finance, beekeeping, and landrace/natural farming. "
+        "I'm a born-and-raised Oregonian that has a passion for creating and understanding things. I graduated from SEHS in 2023 and currently attend college at LCC. My main hobby is programming which I learnt by myself and practice everyday. I find it extremely fun to create projects, particularly in computer graphics. I also have interests in biology, health and food, voxels, hiking, mountain biking, white water kayaking, finance, beekeeping, and landrace/natural farming. "
     ],
     "favorites": [
         {
@@ -107,19 +107,13 @@
                             "title": "Expanded Technical Definition",
                             "assignmentLink": "#",
                             "reflectionLink": "#",
-                            "reflection": [
-                                "Write your first reflection paragraph here. Think about what you learned from this assignment, what challenges you faced, and how it helped develop your technical writing skills.",
-                                "Write your second reflection paragraph here. Consider how this assignment connects to your academic goals, your strengths, or your career aspirations."
-                            ]
+                            "reflection": []
                         },
                         {
                             "title": "Annotated Bibliography",
                             "assignmentLink": "#",
                             "reflectionLink": "#",
-                            "reflection": [
-                                "Write your first reflection paragraph here. What was researching and annotating sources like? What did you learn about evaluating sources and synthesizing information?",
-                                "Write your second reflection paragraph here. How did this assignment build on previous work? How might you use annotated bibliographies in the future?"
-                            ]
+                            "reflection": []
                         },
                         {
                             "title": "Formal Analytical Report",
@@ -131,6 +125,19 @@
                             ]
                         }
                     ]
+                },
+                {
+                    "name": "WR 121Z — Composition 1",
+                    "entries": [
+                        {
+                            "title": "Rhetorical Analysis",
+                            "assignmentLink": "https://docs.google.com/document/d/1BiCsgRlzTovAhKAZRD0SjLXNbL8Xn-0Ea5Unud-NOd4/edit?usp=sharing"
+                        },
+                        {
+                            "title": "Inquiry Essay",
+                            "assignmentLink": "https://docs.google.com/document/d/1M5o5mjgu5avG61bCZmHkXJL6zbXyw_SLG3Rac6184To/edit?usp=sharing"
+                        }
+                    ]
                 }
             ]
         },
@@ -140,17 +147,15 @@
             "color": "#38bdf8",
             "classes": [
                 {
-                    "name": "MTH 111 — College Algebra",
+                    "name": "MTH 251Z — Calculus 1",
                     "entries": [
-                        {
-                            "title": "Sample Assignment",
-                            "assignmentLink": "#",
-                            "reflectionLink": "#",
-                            "reflection": [
-                                "Write your first reflection paragraph here. Describe the mathematical concepts you explored and how you approached problem-solving.",
-                                "Write your second reflection paragraph here. How does this work connect to your broader academic and career goals?"
-                            ]
-                        }
+                        {}
+                    ]
+                },
+                {
+                    "name": "MTH 252Z — Calculus 2",
+                    "entries": [
+                        {}
                     ]
                 }
             ]
