@@ -18,10 +18,10 @@
             "url": "https://www.youtube.com/@xan_dr"
         }
     ],
-    "heroSubtitle": "engineering student • programmer • outdoors",
+    "heroSubtitle": "engineering student • programmer • outdoors fan",
     "heroTagline": "Welcome to my ePortfolio.",
     "aboutMe": [
-        "I'm a born-and-raised Oregonian that has a passion for creating and understanding things. I graduated from SEHS in 2023 and currently attend college at LCC. I developed a pasion for creating things digitally by teaching myself programming. I also have interests in biology, health and food, hiking, mountain biking, finance, beekeeping, and landrace/natural farming."
+        "I'm a born-and-raised Oregonian that has a passion for creating and understanding things. I graduated from SEHS in 2023 and currently attend college at LCC. My main hobby is programming which I learnt bymself and practice everyday. I find it extremely fun to create projects, particularly in graphics. I also have interests in biology, health and food, voxels, hiking, mountain biking, white water kayaking, finance, beekeeping, and landrace/natural farming. "
     ],
     "favorites": [
         {
@@ -32,7 +32,7 @@
         {
             "emoji": "📺",
             "label": "TV Show",
-            "value": "TWD"
+            "value": "The Walking Dead"
         },
         {
             "emoji": "🎬",
@@ -57,7 +57,7 @@
     "strengths": [
         {
             "title": "Algorithmic Thinking",
-            "description": "Although I'm a sensitive and an emotional person, I can turn problems into a set of steps and repeatable instrucitons. I can identify pattersn and where things can be more efficient and think about thinks abstractly."
+            "description": "Although I'm a sensitive and an emotional person, I can turn problems into a set of steps and repeatable instrucitons. I can identify patterns and inefficiencies and think about thinks abstractly."
         },
         {
             "title": "Understanding others",
@@ -65,56 +65,94 @@
         },
         {
             "title": "Kindness & Empathy",
-            "description": "I try and live by the golden rule, and try not to judge people or treat them differently. I try and be understanding of everyone and the place they're in."
+            "description": "I try and live by the golden rule, and try not to judge people or treat them unfairly. I try and be understanding of everyone and the place they're in."
         },
         {
             "title": "Problem Solving",
-            "description": "I'm always thinking, always questioning. I can break complex problems down into simpler ones and come up with solutions. I like to think to myself \"Nothing is impossible\" and there is \"Always a way\""
+            "description": "I'm always thinking, always questioning. I can break complex problems down into smaller simpler problems. I like to think \"Nothing is impossible\" and there is \"Always a way\" to achieve something."
         }
     ],
     "goals": [
         {
             "emoji": "🎓",
-            "title": "Academic Goal",
-            "description": "Describe your academic goal here. What do you want to achieve academically, and why?"
+            "title": "Term Goal",
+            "description": "I would like to refine my routines and become more consistent this term."
         },
         {
             "emoji": "🌱",
             "title": "Experience at Lane",
-            "description": "What do you hope to get out of your time at Lane? Why is this important to you?"
+            "description": "I hope I can use the opportunity given to me at Lane to build a foundation of knowledge and let others know that I'm capable."
         },
         {
             "emoji": "💻",
-            "title": "Career Goal",
-            "description": "What career path are you working toward? Why does this goal matter to you?"
+            "title": "Creating Something Meaningful",
+            "description": "I would like to work in a career where I feel like I'm creating something meanginful for myself and others. Currently, I think that will come from a degree in bio-engineering."
+        },
+        {
+            "emoji": "🤝",
+            "title": "Work with Others",
+            "description": "I would like to improve my collaboration skills because creating awesome things is only possible when people come together and communicate."
         }
     ],
     "academics": [
         {
-            "title": "Expanded Technical Definition",
-            "assignmentLink": "#",
-            "reflectionLink": "#",
-            "reflection": [
-                "Write your first reflection paragraph here. Think about what you learned from this assignment, what challenges you faced, and how it helped develop your technical writing skills.",
-                "Write your second reflection paragraph here. Consider how this assignment connects to your academic goals, your strengths, or your career aspirations."
+            "subject": "Writing",
+            "icon": "✍️",
+            "color": "#a78bfa",
+            "classes": [
+                {
+                    "name": "WR 227 — Technical Writing",
+                    "entries": [
+                        {
+                            "title": "Expanded Technical Definition",
+                            "assignmentLink": "#",
+                            "reflectionLink": "#",
+                            "reflection": [
+                                "Write your first reflection paragraph here. Think about what you learned from this assignment, what challenges you faced, and how it helped develop your technical writing skills.",
+                                "Write your second reflection paragraph here. Consider how this assignment connects to your academic goals, your strengths, or your career aspirations."
+                            ]
+                        },
+                        {
+                            "title": "Annotated Bibliography",
+                            "assignmentLink": "#",
+                            "reflectionLink": "#",
+                            "reflection": [
+                                "Write your first reflection paragraph here. What was researching and annotating sources like? What did you learn about evaluating sources and synthesizing information?",
+                                "Write your second reflection paragraph here. How did this assignment build on previous work? How might you use annotated bibliographies in the future?"
+                            ]
+                        },
+                        {
+                            "title": "Formal Analytical Report",
+                            "assignmentLink": "#",
+                            "reflectionLink": "#",
+                            "reflection": [
+                                "Write your first reflection paragraph here. What was the process of writing a formal analytical report like? What did you learn about data analysis and formal writing?",
+                                "Write your second reflection paragraph here. How does this report demonstrate your growth as a technical writer? How does it connect to your larger goals?"
+                            ]
+                        }
+                    ]
+                }
             ]
         },
         {
-            "title": "Annotated Bibliography",
-            "assignmentLink": "#",
-            "reflectionLink": "#",
-            "reflection": [
-                "Write your first reflection paragraph here. What was researching and annotating sources like? What did you learn about evaluating sources and synthesizing information?",
-                "Write your second reflection paragraph here. How did this assignment build on previous work? How might you use annotated bibliographies in the future?"
-            ]
-        },
-        {
-            "title": "Formal Analytical Report",
-            "assignmentLink": "#",
-            "reflectionLink": "#",
-            "reflection": [
-                "Write your first reflection paragraph here. What was the process of writing a formal analytical report like? What did you learn about data analysis and formal writing?",
-                "Write your second reflection paragraph here. How does this report demonstrate your growth as a technical writer? How does it connect to your larger goals?"
+            "subject": "Math",
+            "icon": "📐",
+            "color": "#38bdf8",
+            "classes": [
+                {
+                    "name": "MTH 111 — College Algebra",
+                    "entries": [
+                        {
+                            "title": "Sample Assignment",
+                            "assignmentLink": "#",
+                            "reflectionLink": "#",
+                            "reflection": [
+                                "Write your first reflection paragraph here. Describe the mathematical concepts you explored and how you approached problem-solving.",
+                                "Write your second reflection paragraph here. How does this work connect to your broader academic and career goals?"
+                            ]
+                        }
+                    ]
+                }
             ]
         }
     ],
@@ -122,7 +160,7 @@
         {
             "title": "Indie Developer Simulator",
             "description": "A 3D browser-based experience where you roleplay as a game programmer. Built from scratch with JavaScript and WebGL.",
-            "link": "#",
+            "link": "https://indiedevelopersimulator.netlify.app",
             "tags": [
                 "JavaScript",
                 "WebGL",
@@ -130,27 +168,24 @@
             ]
         },
         {
-            "title": "Another Project",
-            "description": "Describe another programming project here.",
+            "title": "//TODO:",
+            "description": "Add more",
             "link": "#",
-            "tags": [
-                "Python",
-                "CLI"
-            ]
+            "tags": []
         }
     ],
     "volunteer": [
         {
-            "title": "Volunteer Role Title",
-            "organization": "Organization Name",
-            "description": "Describe your volunteer work, what you did, and what you learned from the experience.",
-            "dates": "2024 – Present"
+            "title": "Arboretum Volunteer",
+            "organization": "Mt. Pisgah Arboretum",
+            "description": "Worked with other volunteers to maintain the grounds.",
+            "dates": "2022 – 2023"
         },
         {
-            "title": "Another Volunteer Role",
-            "organization": "Another Organization",
-            "description": "Describe another volunteer experience here.",
-            "dates": "2023 – 2024"
+            "title": "Gardening",
+            "organization": "Grassroots Garden",
+            "description": "Helped plant vegetables and prepare soil for growing.",
+            "dates": "2022"
         }
     ]
 }

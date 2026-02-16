@@ -1,5 +1,8 @@
 /* script.js — ePortfolio: content loader + interactions */
 
+/* Toggle fade-in/slide-in scroll animations (set to false for static) */
+const TOGGLE_FADE_IN = false;
+
 document.addEventListener('DOMContentLoaded', async () => {
 
   /* ---- Load shared nav ---- */
@@ -157,39 +160,73 @@ document.addEventListener('DOMContentLoaded', async () => {
         </div>`).join('');
     }
 
-    // Academics
+    // Academics (subjects → classes → entries)
     const acadContainer = document.querySelector('[data-content="academics"]');
     if (acadContainer && c.academics) {
-      const aColors = ['#22c55e', '#38bdf8', '#a78bfa'];
-      acadContainer.innerHTML = c.academics.map((a, i) => {
-        const ac = aColors[i % aColors.length];
+      const entryColors = ['#22c55e', '#38bdf8', '#a78bfa'];
+      acadContainer.innerHTML = c.academics.map((subject, si) => {
+        const subjectColor = subject.color || entryColors[si % entryColors.length];
+        const classesHTML = subject.classes.map((cls, ci) => {
+          const entriesHTML = cls.entries.map((a, ei) => {
+            const ac = entryColors[ei % entryColors.length];
+            return `
+              <div class="academic-card fade-in" style="margin-bottom: 28px;">
+                <div class="academic-card__header">
+                  <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="4" y="2" width="20" height="28" rx="3" stroke="${ac}" stroke-width="1.2" fill="${ac}0f"/>
+                    <path d="M18 2 V8 H24" stroke="${ac}" stroke-width="1" fill="none" opacity="0.5"/>
+                    <rect x="8" y="12" width="12" height="2" rx="1" fill="${ac}" opacity="0.4"/>
+                    <rect x="8" y="17" width="10" height="2" rx="1" fill="${ac}" opacity="0.25"/>
+                    <rect x="8" y="22" width="14" height="2" rx="1" fill="${ac}" opacity="0.2"/>
+                  </svg>
+                  <h3>${a.title}</h3>
+                </div>
+                <div class="academic-card__body">
+                  <div class="academic-card__links">
+                    <a href="${a.assignmentLink}" target="_blank" rel="noopener">📄 View Assignment</a>
+                    <a href="${a.reflectionLink}" target="_blank" rel="noopener">💭 View Reflection</a>
+                  </div>
+                  <div class="academic-card__reflection">
+                    <h4>// reflection</h4>
+                    ${a.reflection.map(p => `<p>${p}</p>`).join('')}
+                  </div>
+                </div>
+              </div>`;
+          }).join('');
+
+          return `
+            <div class="academic-class fade-in">
+              <div class="academic-class__header">
+                <span class="academic-class__icon" style="color: ${subjectColor}">📚</span>
+                <h4 class="academic-class__name">${cls.name}</h4>
+              </div>
+              <div class="academic-class__entries">
+                ${entriesHTML}
+              </div>
+            </div>`;
+        }).join('');
+
         return `
-          <div class="academic-card fade-in" style="margin-bottom: 28px;">
-            <div class="academic-card__header">
-              <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="4" y="2" width="20" height="28" rx="3" stroke="${ac}" stroke-width="1.2" fill="${ac}0f"/>
-                <path d="M18 2 V8 H24" stroke="${ac}" stroke-width="1" fill="none" opacity="0.5"/>
-                <rect x="8" y="12" width="12" height="2" rx="1" fill="${ac}" opacity="0.4"/>
-                <rect x="8" y="17" width="10" height="2" rx="1" fill="${ac}" opacity="0.25"/>
-                <rect x="8" y="22" width="14" height="2" rx="1" fill="${ac}" opacity="0.2"/>
-              </svg>
-              <h3>${a.title}</h3>
+          <div class="academic-subject fade-in" style="--subject-color: ${subjectColor}">
+            <div class="academic-subject__header" onclick="this.parentElement.classList.toggle('collapsed')">
+              <div class="academic-subject__title-row">
+                <span class="academic-subject__icon">${subject.icon || '📖'}</span>
+                <h3 class="academic-subject__name">${subject.subject}</h3>
+              </div>
+              <span class="academic-subject__toggle">
+                <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                  <polyline points="6,8 10,12 14,8"/>
+                </svg>
+              </span>
             </div>
-            <div class="academic-card__body">
-              <div class="academic-card__links">
-                <a href="${a.assignmentLink}" target="_blank" rel="noopener">📄 View Assignment</a>
-                <a href="${a.reflectionLink}" target="_blank" rel="noopener">💭 View Reflection</a>
-              </div>
-              <div class="academic-card__reflection">
-                <h4>// reflection</h4>
-                ${a.reflection.map(p => `<p>${p}</p>`).join('')}
-              </div>
+            <div class="academic-subject__body">
+              ${classesHTML}
             </div>
           </div>`;
       }).join('');
 
-      // Re-observe new fade-in elements
-      acadContainer.querySelectorAll('.fade-in').forEach(el => fadeObserver.observe(el));
+      // Handle new fade-in elements
+      acadContainer.querySelectorAll('.fade-in').forEach(el => TOGGLE_FADE_IN ? fadeObserver.observe(el) : el.classList.add('visible'));
     }
 
     // Programming projects
@@ -215,7 +252,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             </div>
           </div>`;
       }).join('');
-      progContainer.querySelectorAll('.fade-in').forEach(el => fadeObserver.observe(el));
+      progContainer.querySelectorAll('.fade-in').forEach(el => TOGGLE_FADE_IN ? fadeObserver.observe(el) : el.classList.add('visible'));
     }
 
     // Volunteer work
@@ -241,7 +278,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             </div>
           </div>`;
       }).join('');
-      volContainer.querySelectorAll('.fade-in').forEach(el => fadeObserver.observe(el));
+      volContainer.querySelectorAll('.fade-in').forEach(el => TOGGLE_FADE_IN ? fadeObserver.observe(el) : el.classList.add('visible'));
     }
 
     // Footer year + name
@@ -286,18 +323,23 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   /* ---- Intersection Observer: fade-in on scroll ---- */
   const faders = document.querySelectorAll('.fade-in, .fade-in-left, .fade-in-right');
-  const observerOpts = { threshold: 0.12, rootMargin: '0px 0px -40px 0px' };
 
-  const fadeObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        fadeObserver.unobserve(entry.target);
-      }
-    });
-  }, observerOpts);
-
-  faders.forEach(el => fadeObserver.observe(el));
+  let fadeObserver;
+  if (TOGGLE_FADE_IN) {
+    const observerOpts = { threshold: 0.12, rootMargin: '0px 0px -40px 0px' };
+    fadeObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          fadeObserver.unobserve(entry.target);
+        }
+      });
+    }, observerOpts);
+    faders.forEach(el => fadeObserver.observe(el));
+  } else {
+    // Static mode: immediately show everything
+    faders.forEach(el => el.classList.add('visible'));
+  }
 
   /* ---- Mobile hamburger toggle ---- */
   const hamburger = document.querySelector('.nav__hamburger');

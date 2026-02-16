@@ -537,20 +537,53 @@ svg {
 
 /* --- Cards --- */
 .card {
+  position: relative;
   background: var(--bg-card);
   border: 1px solid var(--border-subtle);
+  border-left: 2px solid transparent;
   border-radius: var(--radius);
   padding: 32px;
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   box-shadow: var(--shadow-card);
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  overflow: hidden;
+  transition: border-color 0.3s ease, background 0.3s ease;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--accent-green), transparent);
+  opacity: 0;
+  transform: translateY(-1px);
+  transition: opacity 0.3s ease;
+  animation: none;
 }
 
 .card:hover {
-  transform: translateY(-4px);
-  border-color: var(--border-glow);
-  box-shadow: var(--shadow-card), var(--shadow-glow);
+  border-left-color: var(--accent-green);
+  background: var(--bg-card-hover);
+}
+
+.card:hover::before {
+  opacity: 1;
+  animation: scanline 0.6s ease-out forwards;
+}
+
+@keyframes scanline {
+  0% {
+    transform: translateY(-1px);
+    opacity: 0.8;
+  }
+
+  100% {
+    transform: translateY(calc(var(--card-h, 200px)));
+    opacity: 0;
+  }
 }
 
 .card__icon {
@@ -631,14 +664,15 @@ svg {
   padding: 12px 18px;
   background: var(--bg-card);
   border: 1px solid var(--border-subtle);
+  border-left: 2px solid transparent;
   border-radius: var(--radius-sm);
   backdrop-filter: blur(6px);
-  transition: border-color 0.2s, transform 0.2s;
+  transition: border-color 0.3s, background 0.3s;
 }
 
 .favorites__item:hover {
-  border-color: var(--border-glow);
-  transform: translateY(-2px);
+  border-left-color: var(--accent-blue);
+  background: var(--bg-card-hover);
 }
 
 .favorites__emoji {
@@ -692,14 +726,16 @@ svg {
   padding: 16px 20px;
   background: var(--bg-card);
   border: 1px solid var(--border-subtle);
+  border-left: 2px solid transparent;
   border-radius: var(--radius-sm);
   color: var(--text-secondary);
   font-size: 0.95rem;
-  transition: border-color 0.2s;
+  transition: border-color 0.3s, background 0.3s;
 }
 
 .strengths-list li:hover {
-  border-color: var(--border-glow);
+  border-left-color: var(--accent-green);
+  background: var(--bg-card-hover);
 }
 
 .strengths-list li svg {
@@ -709,18 +745,168 @@ svg {
   margin-top: 2px;
 }
 
+/* --- Academic Subject Groups --- */
+.academic-subject {
+  margin-bottom: 40px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border-subtle);
+  border-left: 2px solid transparent;
+  background: var(--bg-card);
+  overflow: hidden;
+  transition: border-color 0.3s ease, background 0.3s ease;
+}
+
+.academic-subject:hover {
+  border-left-color: var(--subject-color, var(--accent-green));
+}
+
+.academic-subject__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 28px;
+  cursor: pointer;
+  background: linear-gradient(135deg,
+      color-mix(in srgb, var(--subject-color, var(--accent-green)) 8%, transparent),
+      color-mix(in srgb, var(--subject-color, var(--accent-green)) 3%, transparent));
+  border-bottom: 1px solid color-mix(in srgb, var(--subject-color, var(--accent-green)) 15%, transparent);
+  transition: background 0.2s ease;
+  user-select: none;
+}
+
+.academic-subject__header:hover {
+  background: linear-gradient(135deg,
+      color-mix(in srgb, var(--subject-color, var(--accent-green)) 14%, transparent),
+      color-mix(in srgb, var(--subject-color, var(--accent-green)) 6%, transparent));
+}
+
+.academic-subject__title-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.academic-subject__icon {
+  font-size: 1.6rem;
+  line-height: 1;
+}
+
+.academic-subject__name {
+  font-family: var(--font-mono);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: 0.01em;
+}
+
+.academic-subject__toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  color: var(--text-muted);
+  transition: transform 0.3s ease, color 0.2s ease;
+}
+
+.academic-subject__toggle svg {
+  width: 20px;
+  height: 20px;
+}
+
+.academic-subject.collapsed .academic-subject__toggle {
+  transform: rotate(-90deg);
+}
+
+.academic-subject__body {
+  padding: 24px 28px;
+  transition: max-height 0.4s ease, opacity 0.3s ease, padding 0.3s ease;
+  overflow: hidden;
+}
+
+.academic-subject.collapsed .academic-subject__body {
+  max-height: 0;
+  opacity: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+/* --- Academic Class Sub-headers --- */
+.academic-class {
+  margin-bottom: 28px;
+  border-left: 3px solid var(--subject-color, var(--accent-green));
+  padding-left: 20px;
+}
+
+.academic-class:last-child {
+  margin-bottom: 0;
+}
+
+.academic-class__header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px dashed var(--border-subtle);
+}
+
+.academic-class__icon {
+  font-size: 1.15rem;
+  line-height: 1;
+}
+
+.academic-class__name {
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.academic-class__count {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  padding: 2px 10px;
+  background: rgba(148, 163, 184, 0.08);
+  border: 1px solid var(--border-subtle);
+  border-radius: 12px;
+  margin-left: auto;
+}
+
+
 /* --- Academic Cards --- */
 .academic-card {
+  position: relative;
   background: var(--bg-card);
   border: 1px solid var(--border-subtle);
+  border-left: 2px solid transparent;
   border-radius: var(--radius);
   overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: border-color 0.3s ease, background 0.3s ease;
+}
+
+.academic-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--accent-green), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  animation: none;
 }
 
 .academic-card:hover {
-  transform: translateY(-3px);
-  box-shadow: var(--shadow-card), var(--shadow-glow);
+  border-left-color: var(--accent-green);
+  background: var(--bg-card-hover);
+}
+
+.academic-card:hover::before {
+  opacity: 1;
+  animation: scanline 0.6s ease-out forwards;
 }
 
 .academic-card__header {
@@ -993,4 +1179,9 @@ svg {
   .card {
     padding: 24px;
   }
+}
+
+/* --- Programming Page Specifics --- */
+body[data-page="programming"] .academic-card__links {
+  justify-content: center;
 }
