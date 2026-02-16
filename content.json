@@ -81,7 +81,7 @@
         {
             "emoji": "🌱",
             "title": "Experience at Lane",
-            "description": "I hope I can use the opportunity given to me at Lane to build a foundation of knowledge and let others know that I'm capable."
+            "description": "I hope I can use this opportunity given to me at Lane to build a foundation of knowledge and let others know that I'm capable."
         },
         {
             "emoji": "💻",
@@ -105,7 +105,7 @@
                     "entries": [
                         {
                             "title": "Expanded Technical Definition",
-                            "assignmentLink": "#",
+                            "assignmentLink": "https://docs.google.com/document/d/1wgJ8zrOodjh94nsRFHRnX9LfTfvi5qi8Zol3WTJUYzM/edit?usp=sharing",
                             "reflectionLink": "#",
                             "reflection": []
                         },
@@ -119,10 +119,7 @@
                             "title": "Formal Analytical Report",
                             "assignmentLink": "#",
                             "reflectionLink": "#",
-                            "reflection": [
-                                "Write your first reflection paragraph here. What was the process of writing a formal analytical report like? What did you learn about data analysis and formal writing?",
-                                "Write your second reflection paragraph here. How does this report demonstrate your growth as a technical writer? How does it connect to your larger goals?"
-                            ]
+                            "reflection": []
                         }
                     ]
                 },

@@ -172,8 +172,26 @@ document.addEventListener('DOMContentLoaded', async () => {
       acadContainer.innerHTML = c.academics.map((subject, si) => {
         const subjectColor = subject.color || entryColors[si % entryColors.length];
         const classesHTML = subject.classes.map((cls, ci) => {
-          const entriesHTML = cls.entries.map((a, ei) => {
+          const entriesHTML = cls.entries.filter(a => a && a.title).map((a, ei) => {
             const ac = entryColors[ei % entryColors.length];
+            const hasAssignment = a.assignmentLink && a.assignmentLink !== '#' && a.assignmentLink !== '';
+            const hasReflectionLink = a.reflectionLink && a.reflectionLink !== '#' && a.reflectionLink !== '';
+            const hasReflection = a.reflection && a.reflection.length > 0;
+
+            const assignmentBtn = hasAssignment
+              ? `<a href="${a.assignmentLink}" target="_blank" rel="noopener">📄 View Assignment</a>`
+              : `<span class="link-disabled" title="Coming soon">📄 View Assignment</span>`;
+            const reflectionBtn = hasReflectionLink
+              ? `<a href="${a.reflectionLink}" target="_blank" rel="noopener">💭 View Reflection</a>`
+              : `<span class="link-disabled" title="Coming soon">💭 View Reflection</span>`;
+
+            const reflectionSection = hasReflection
+              ? `<div class="academic-card__reflection">
+                    <h4>// reflection</h4>
+                    ${a.reflection.map(p => `<p>${p}</p>`).join('')}
+                  </div>`
+              : '';
+
             return `
               <div class="academic-card fade-in" style="margin-bottom: 28px;">
                 <div class="academic-card__header">
@@ -188,13 +206,10 @@ document.addEventListener('DOMContentLoaded', async () => {
                 </div>
                 <div class="academic-card__body">
                   <div class="academic-card__links">
-                    <a href="${a.assignmentLink}" target="_blank" rel="noopener">📄 View Assignment</a>
-                    <a href="${a.reflectionLink}" target="_blank" rel="noopener">💭 View Reflection</a>
+                    ${assignmentBtn}
+                    ${reflectionBtn}
                   </div>
-                  <div class="academic-card__reflection">
-                    <h4>// reflection</h4>
-                    ${a.reflection.map(p => `<p>${p}</p>`).join('')}
-                  </div>
+                  ${reflectionSection}
                 </div>
               </div>`;
           }).join('');

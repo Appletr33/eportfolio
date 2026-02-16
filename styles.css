@@ -977,6 +977,16 @@ body.enable-scanline .academic-card:hover::before {
   border-color: rgba(56, 189, 248, 0.3);
 }
 
+.academic-card__links .link-disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  color: var(--text-muted);
+  background: rgba(148, 163, 184, 0.06);
+  border-color: rgba(148, 163, 184, 0.12);
+  pointer-events: none;
+  user-select: none;
+}
+
 .academic-card__reflection h4 {
   font-family: var(--font-mono);
   font-size: 0.9rem;
