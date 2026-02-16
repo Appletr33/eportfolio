@@ -1210,6 +1210,27 @@ body.enable-scanline .academic-card:hover::before {
 
   .nav__hamburger {
     display: flex;
+    order: 3;
+  }
+
+  .nav__socials {
+    margin: 0;
+    padding: 0;
+    border: none;
+    flex-direction: row;
+    width: auto;
+    gap: 4px;
+    order: 2;
+    margin-left: auto;
+    margin-right: 8px;
+  }
+
+  .social-link {
+    padding: 8px;
+  }
+
+  .social-link span {
+    display: none;
   }
 
   .about-layout {

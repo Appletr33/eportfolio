@@ -23,11 +23,11 @@
     "aboutMe": [
         {
             "title": "My Background",
-            "text": "I'm a born-and-raised Oregonian that has a passion for creating and understanding things. I graduated from SEHS in 2023 and currently attend college at LCC. My main hobby is programming which I learnt by myself and practice every day. I find it extremely fun to create projects, particularly in computer graphics. I also have interests in biology, health and food, voxels, hiking, mountain biking, white water kayaking, finance, beekeeping, and landrace/natural farming."
+            "text": "I'm a born-and-raised Oregonian who has a passion for creating and understanding things. I graduated from SEHS in 2023 and currently attend college at LCC. My main hobby is programming which I learned by myself and practice every day. I find it extremely fun to create projects, particularly in computer graphics. I also have interests in biology, health and food, voxels, hiking, mountain biking, white water kayaking, finance, beekeeping, and landrace/natural farming."
         },
         {
             "title": "Recently",
-            "text": "For the first time in my life I know what it's like to take care of a pet. During my childhood I was allergic to dogs and cats, so I never got the chance to take care of a pet, that was until last year, when the CDS (cat distribution system) changed that for me. Although the little rascal, Finn, requires a lot of attention, it's been an eye opening experience to be responsible for something living, and totally given me new perspective about owning pets."
+            "text": "For the first time in my life I know what it's like to take care of a pet. During my childhood I was allergic to dogs and cats, so I never got the chance to take care of a pet, that was until last year, when the CDS (Cat Distribution System) changed that for me. Although the little rascal, Finn, requires a lot of attention, it's been an eye opening experience to be responsible for something living, and totally given me new perspective about owning pets."
         },
         {
             "title": "In the Future",
@@ -53,7 +53,7 @@
     ],
     "achievements": [
         {
-            "title": "Graduated Highschool",
+            "title": "Graduated High School",
             "description": "Was a part of IB IHS program for 3 years. I completed AP classes too."
         },
         {
@@ -87,7 +87,7 @@
         {
             "emoji": "🎓",
             "title": "Term Goal",
-            "description": "I would like to refine my routines and become more consistent this term. I would also like to spread out my work more effectively, so I never feel overwhelemed or get bored."
+            "description": "I would like to refine my routines and become more consistent this term. I would also like to spread out my work more effectively, so I never feel overwhelmed or get bored."
         },
         {
             "emoji": "🌱",
