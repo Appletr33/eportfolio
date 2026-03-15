@@ -10,6 +10,10 @@ document.addEventListener('DOMContentLoaded', async () => {
     document.body.classList.add('enable-scanline');
   }
 
+  const markContentReady = () => {
+    document.body.classList.add('content-ready');
+  };
+
   /* ---- Load shared nav ---- */
   const navSlot = document.getElementById('shared-nav');
   if (navSlot) {
@@ -39,11 +43,13 @@ document.addEventListener('DOMContentLoaded', async () => {
     const resp = await fetch(`content.json?t=${Date.now()}`);
     content = await resp.json();
     applyContent(content);
+    markContentReady();
 
     // Initialize typing animation AFTER content is applied, so we type the loaded text
     initTypingAnimation();
   } catch (e) {
     console.warn('Could not load content.json, using inline fallbacks.', e);
+    markContentReady();
     // If loading fails, still run animation with whatever is in the HTML
     initTypingAnimation();
   }

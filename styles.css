@@ -1286,3 +1286,8 @@ body.enable-scanline .academic-card:hover::before {
 body[data-page="programming"] .academic-card__links {
   justify-content: center;
 }
+
+body:not(.content-ready) [data-content="name"],
+body:not(.content-ready) [data-content="footerCopy"] {
+  visibility: hidden;
+}

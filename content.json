@@ -170,20 +170,91 @@
     ],
     "programming": [
         {
-            "title": "Indie Developer Simulator",
-            "description": "A 3D browser-based experience where you roleplay as a game programmer. Built from scratch with JavaScript and WebGL.",
-            "link": "https://indiedevelopersimulator.netlify.app",
+            "title": "Vulkan N-Body Simulation",
+            "description": "A GPU-accelerated N-body simulation built in C++ with Vulkan, where both the physics calculations and the rendering pipeline run on the GPU.",
+            "link": "https://github.com/Appletr33/Vulkan-N-Body-Simulation",
             "tags": [
-                "JavaScript",
-                "WebGL",
-                "3D"
+                "C++",
+                "Vulkan",
+                "GPU Compute",
+                "Simulation"
             ]
         },
         {
-            "title": "//TODO:",
-            "description": "Add more",
-            "link": "#",
-            "tags": []
+            "title": "Meal Planner",
+            "description": "A meal planning web app built with TypeScript and Next.js, with a live deployment for organizing recipes and planning meals in the browser.",
+            "link": "https://meal-planner-flax.vercel.app",
+            "tags": [
+                "TypeScript",
+                "Next.js",
+                "Web App",
+                "Vercel"
+            ]
+        },
+        {
+            "title": "OpenGL Micro Projects",
+            "description": "A collection of graphics experiments created to learn OpenGL, paired with a Python Flask site used to serve compiled WebGL builds.",
+            "link": "https://github.com/Appletr33/OpenGL-Micro-Projects",
+            "tags": [
+                "C++",
+                "OpenGL",
+                "WebGL",
+                "Flask"
+            ]
+        },
+        {
+            "title": "Mandelbrot & Tree Fractals",
+            "description": "A C++ fractal renderer that generates Mandelbrot sets and tree fractals to PNG files using CPU-side computation.",
+            "link": "https://github.com/Appletr33/Mandelbrot-Tree-Fractals",
+            "tags": [
+                "C++",
+                "Fractals",
+                "libpng",
+                "Rendering"
+            ]
+        },
+        {
+            "title": "Raycaster Maze Game",
+            "description": "A real-time C++ maze renderer using a custom raycaster, procedural maze generation, SDL audio, and OpenGL rendering.",
+            "link": "https://github.com/Appletr33/Raycaster-Maze-Game",
+            "tags": [
+                "C++",
+                "Raycasting",
+                "OpenGL",
+                "SDL"
+            ]
+        },
+        {
+            "title": "Vulkan Graphics Engine",
+            "description": "An early graphics engine project focused on learning Vulkan fundamentals, rendering pipelines, and low-level GPU programming.",
+            "link": "https://github.com/Appletr33/Vulkan-Graphics-Engine",
+            "tags": [
+                "C++",
+                "Vulkan",
+                "Graphics Engine"
+            ]
+        },
+        {
+            "title": "Swift Music Player",
+            "description": "An iOS music player written in Swift to play local MP3 files outside the default iTunes workflow.",
+            "link": "https://github.com/Appletr33/SwiftMusicPlayer",
+            "tags": [
+                "Swift",
+                "iOS",
+                "Xcode",
+                "Media App"
+            ]
+        },
+        {
+            "title": "COUP-Pong",
+            "description": "A Unity web game built in C# and served with Flask, created as a history project centered on the 1953 coup in Iran.",
+            "link": "https://github.com/Appletr33/COUP-Pong",
+            "tags": [
+                "C#",
+                "Unity",
+                "Flask",
+                "Web Game"
+            ]
         }
     ],
     "volunteer": [
