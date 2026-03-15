@@ -3,9 +3,14 @@
 /* Toggle fade-in/slide-in scroll animations (set to false for static) */
 const TOGGLE_FADE_IN = false;
 const ENABLE_SCANLINE_EFFECT = false;
+const SITE_VERSION = window.__SITE_VERSION__ || '2026-03-15-1';
 
+function assetUrl(path) {
+  const separator = path.includes('?') ? '&' : '?';
+  return `${path}${separator}v=${encodeURIComponent(SITE_VERSION)}`;
+}
 
-document.addEventListener('DOMContentLoaded', async () => {
+async function initPortfolioSite() {
   if (ENABLE_SCANLINE_EFFECT) {
     document.body.classList.add('enable-scanline');
   }
@@ -18,7 +23,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   const navSlot = document.getElementById('shared-nav');
   if (navSlot) {
     try {
-      const navResp = await fetch('nav.html');
+      const navResp = await fetch(assetUrl('nav.html'), { cache: 'no-store' });
       navSlot.innerHTML = await navResp.text();
     } catch (e) {
       console.warn('Could not load nav.html', e);
@@ -29,7 +34,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   const footerSlot = document.getElementById('shared-footer');
   if (footerSlot) {
     try {
-      const footerResp = await fetch('footer.html');
+      const footerResp = await fetch(assetUrl('footer.html'), { cache: 'no-store' });
       footerSlot.innerHTML = await footerResp.text();
     } catch (e) {
       console.warn('Could not load footer.html', e);
@@ -39,8 +44,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   /* ---- Load content.json ---- */
   let content = null;
   try {
-    // Cache-busting to ensure we always get fresh content, fixing the issue where browser shows stale data
-    const resp = await fetch(`content.json?t=${Date.now()}`);
+    const resp = await fetch(assetUrl('content.json'), { cache: 'no-store' });
     content = await resp.json();
     applyContent(content);
     markContentReady();
@@ -508,4 +512,10 @@ document.addEventListener('DOMContentLoaded', async () => {
       observer.observe(section);
     });
   }
-});
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initPortfolioSite, { once: true });
+} else {
+  initPortfolioSite();
+}
